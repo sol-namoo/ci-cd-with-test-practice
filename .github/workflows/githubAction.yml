@@ -3,14 +3,13 @@ name: Github Action Practice
 on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: 
+    - name: actions test
       uses: actions/setup-node@v3
-      with: Github Action Build
-        node-version: '16'
-        cache: 'npm'
+      with:
+          node-version: '16'
     - run: npm i
     - run: npm test
