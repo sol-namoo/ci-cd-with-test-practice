@@ -1,0 +1,16 @@
+name: Github Action Practice
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: 
+      uses: actions/setup-node@v3
+      with: Github Action Build
+        node-version: '16'
+        cache: 'npm'
+    - run: npm i
+    - run: npm test
